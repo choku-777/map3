@@ -392,10 +392,10 @@ def cleanup_temp_files(max_age_hours=24):
             except Exception as e:
                 print(f"一時ファイルの削除に失敗しました: {e}")
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     # 起動時に古い一時ファイルをクリーンアップ
-    cleanup_temp_files()
+    #cleanup_temp_files()
 
     # Railway の PORT 環境変数を取得してアプリを起動
-    port = int(os.environ.get("PORT", 8080))  
-    app.run(host='0.0.0.0', port=port, debug=False)  # debug=False にする
+    #port = int(os.environ.get("PORT", 8080))  
+    #app.run(host='0.0.0.0', port=port, debug=False)  # debug=False にする
