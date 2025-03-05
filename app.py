@@ -395,8 +395,7 @@ def cleanup_temp_files(max_age_hours=24):
 if __name__ == '__main__':
     # 起動時に古い一時ファイルをクリーンアップ
     cleanup_temp_files()
-    # ホスト'0.0.0.0'で起動することで、ネットワーク上からアクセス可能になります
-    # port=5000を指定することで、使用するポート番号を明示的に設定します
-    if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8080))  # Railway の PORT 変数を取得
+
+    # Railway の PORT 環境変数を取得してアプリを起動
+    port = int(os.environ.get("PORT", 8080))  
     app.run(host='0.0.0.0', port=port, debug=False)  # debug=False にする
