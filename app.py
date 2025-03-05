@@ -397,4 +397,6 @@ if __name__ == '__main__':
     cleanup_temp_files()
     # ホスト'0.0.0.0'で起動することで、ネットワーク上からアクセス可能になります
     # port=5000を指定することで、使用するポート番号を明示的に設定します
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 8080))  # Railway の PORT 変数を取得
+    app.run(host='0.0.0.0', port=port, debug=False)  # debug=False にする
